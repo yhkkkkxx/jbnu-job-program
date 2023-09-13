@@ -69,7 +69,7 @@ public class RoadAddrApiController {
             if (searchBldgNumber != null) {
 
                 // 건물번호가 본번 형태인지 부번 형태인지 '-' 을 기준으로 확인해야 합니다.
-                String[] bldgNumberArray = searchBldgNumber.split();
+                String[] bldgNumberArray = searchBldgNumber.trim().split("-");
 
                 // 건물번호가 본번만 입력된 형태라면 (예 : 흑석로 84)
                 if (bldgNumberArray.length == 1) {
