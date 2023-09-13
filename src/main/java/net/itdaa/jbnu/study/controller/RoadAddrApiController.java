@@ -75,7 +75,7 @@ public class RoadAddrApiController {
                 if (bldgNumberArray.length == 1) {
 
                     // 건물번호가 문자로 되어 있으므로 숫자로 바꿔야 합니다. (DB는 숫자컬럼으로 되어 있음)
-                    buildingMainNumber = Integer.parseInt();
+                    buildingMainNumber = Integer.parseInt(bldgNumberArray[0]);
 
                     // 도로명 검색어를 Like 로 하여 건물번호가 일치하는 도로명 주소를 찾습니다.
                     searchResultList = roadAddrRepository.findByRoadNameStartingWithAndBldgMainNo(searchRoadAddress, buildingMainNumber);
